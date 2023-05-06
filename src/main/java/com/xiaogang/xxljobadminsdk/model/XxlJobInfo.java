@@ -11,17 +11,19 @@ import java.util.Date;
  */
 @Data
 public class XxlJobInfo {
-	
+
 	private int id;				// 主键ID
-	
+
 	private int jobGroup;		// 执行器主键ID
 	private String jobDesc;
-	
+
 	private Date addTime;
 	private Date updateTime;
-	
+
 	private String author;		// 负责人
 	private String alarmEmail;	// 报警邮件
+
+	private String jobCron;
 
 	private String scheduleType;			// 调度类型
 	private String scheduleConf;			// 调度配置，值含义取决于调度类型
@@ -33,7 +35,7 @@ public class XxlJobInfo {
 	private String executorBlockStrategy;	// 阻塞处理策略
 	private int executorTimeout;     		// 任务执行超时时间，单位秒
 	private int executorFailRetryCount;		// 失败重试次数
-	
+
 	private String glueType;		// GLUE类型	#com.xxl.job.core.glue.GlueTypeEnum
 	private String glueSource;		// GLUE源代码
 	private String glueRemark;		// GLUE备注
